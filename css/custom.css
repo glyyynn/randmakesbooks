@@ -11,8 +11,8 @@ body {
 header {
   	z-index: 100;
 	height: 150px;
-	width: 810px;
-	margin-left: 92px;
+	width: 860px;
+	margin-left: 67px;
 	position: relative;
 }
 
@@ -20,9 +20,13 @@ header {
   background: rgba(0, 255, 0, .25);
 }
 
-header a {
+header a#about, header a#contact {
 	position: absolute;
-	top: 55px;
+/*	top: 55px;
+*/	padding-top: 55px;
+	padding-bottom: 55px;
+	padding-right: 25px;
+	padding-left: 25px;
 }
 
 header .nav-img {
@@ -37,21 +41,20 @@ a {
 	text-decoration: none;
 }
 
-a#l-info {
+a#about {
 	left: 0
 }
 
-a#l-land {
+a#contact {
 	right: 0
 }
 
-#store, #info {
-  position: fixed;
-  z-index: 101;
-  top: 216px; /* 281 */
-  margin-left: 260px;
-  width: 415px;
-}
+/*#logo-link {
+	width: 175px;
+	top: 25px;
+	position: absolute;
+	z-index: 200;
+}*/
 
 a.link {
   display: block;
@@ -60,40 +63,11 @@ a.link {
   left: 130px;
 }
 
-a.close {
-	position: absolute;
-	top: 270px;
-	left: 194px;
-}
-
-#store {
-  background: url('../images/store_pattern.png') no-repeat;
-  height: 317px;
-}
-
-#info {
-  background: url('../images/info_background.png') no-repeat;
-  height: 318px;
-}
-
-#envelope {
-  position: relative;
-  display: block;
-  left: 449px;
-}
-
-#envelope,
-#envelope img {
-  width: 24px;
-  height: 16px;
-  display: block;
-}
-
 #logo {
 	position: relative;
+	width: 200px;
 	top: 25px;
-	margin: 0 auto;
-	display: block;
+	margin: 0 330px;
 }
 
 #main {
