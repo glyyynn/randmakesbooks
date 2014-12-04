@@ -23,7 +23,7 @@ header {
 header a#about, header a#contact {
 	position: absolute;
 /*	top: 55px;
-*/	padding-top: 55px;
+*/	padding-top: 70px;
 	padding-bottom: 55px;
 	padding-right: 25px;
 	padding-left: 25px;
@@ -226,5 +226,27 @@ a.link {
 
 .buy-link:hover {
 	text-decoration: underline;
+}
+
+
+/*** About Page ***/
+
+.title {
+	padding-top: 15px;
+	text-align: center;
+}
+
+.title h1 {
+	padding-top: 115px;
+	font-size: 1.75em;
+}
+
+.title p {
+	font-family: Georgia, serif;
+	padding-top: 15px;
+}
+
+.title p:first-of-type {
+	padding-top: 50px;
 }
 
