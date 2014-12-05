@@ -26,36 +26,6 @@ function shift_photo(p, direction) {
 	//var current = new_el.attr('data-slide');
 }
 
-// function shift_caption(c, direction) {
-// 	var el = $('.captions', c);
-// 	var on = $('div.on', el);
-// 	if (direction == 1) {
-// 		var new_el = on.next();
-// 		if (new_el.length == 0) {
-// 			new_el = $('div:first', el);
-// 		}
-// 	}
-// 	else {
-// 		var new_el = on.prev();
-// 		if (new_el.length == 0) {
-// 			new_el = $('div:last', el);
-// 		}
-// 	}
-// 	on.removeClass('on');
-// 	new_el.addClass('on');
-// 	load_caption_for(new_el);
-// 	//var total = $('div', el).length;
-// 	//var current = new_el.attr('data-slide');
-// }
-
-// function load_caption_for(el) {
-// 	var caption_num = (el.attr('data-slide');
-
-// 	var y = document.createElement('p');
-// 	y.innerHTML = el.attr('data-caption');
-
-// }
-
 // Load photo function
 
 function load_photo(el) {
@@ -177,70 +147,71 @@ $(document).ready(function() {
 	/*** SCROLL STUFF ***/
 
 	// Changes the url based on scroll height
-	// function watch_scroll() {
-	// 	var container = 607;
-	// 	var offset = 125;
-	// 	var number = 0;
-	// 	var x = scroll_me.scrollTop();
-	// 	if (x > container - offset) {
-	// 		number = Math.floor((x + offset) / container);
-	// 	}
+	function watch_scroll() {
+		var container = 607;
+		var offset = 125;
+		var number = 0;
+		var x = scroll_me.scrollTop();
+		if (x > container - offset) {
+			number = Math.floor((x + offset) / container);
+		}
 
-	// 	var new_url = $('.project').eq(number).attr('id').substr(2);
-	// 	// console.log([x, number, new_url]);
-	// 	if (new_url != url) {
-	// 		url = new_url;
-	// 		$('a.close').attr('href', '#/' + url);			
-	// 		if (!popup) {
-	// 			document.location = '#/' + url;
-	// 		}
-	// 	}
-	// }
+		var new_url = $('.project').eq(number).attr('id').substr(2);
+		// console.log([x, number, new_url]);
+		if (new_url != url) {
+			url = new_url;
+			$('a.close').attr('href', '#/' + url);			
+			if (!popup) {
+				document.location = '#/' + url;
+			}
+		}
+	}
 
 
-	// Manages page load depending on url link and junk
-	// function load_page() {
-	// 	var page = document.location.hash.toString().replace('#/', '');
-	// 	$('#info, #store').css('display', 'none');
-	// 	if (page == 'info' || page == 'store') {
-	// 		$('#' + page).css('display', '');
-	// 		popup = true;
-	// 	}
-	// 	else if (popup) {
-	// 		popup = false;			
-	// 		watch_scroll();
-	// 	}
-	// 	else {
-	// 		popup = false;
-	// 	}
-	// }
+	//Manages page load depending on url link and junk
 
-	// Handles change in hash
+	function load_page() {
+		var page = document.location.hash.toString().replace('#/', '');
+		$('#info, #store').css('display', 'none');
+		if (page == 'info' || page == 'store') {
+			$('#' + page).css('display', '');
+			popup = true;
+		}
+		else if (popup) {
+			popup = false;			
+			watch_scroll();
+		}
+		else {
+			popup = false;
+		}
+	}
 
-	// Binds hashchange event to load_page function
-	// $(window).bind('hashchange', load_page);
+	//Handles change in hash
 
-	// var page = document.location.hash.toString().replace('#/', '');
-	// if (page != '') {
-	// 	if (page != 'info' && page != 'store') {
-	// 		var el = $('#p_' + page);
-	// 		if (el.length == 0) {
-	// 			scroll_me.scrollTop(0);
-	// 		}
-	// 		else {
-	// 			url = page;
-	// 			var number = el.attr('data-number');
-	// 			scroll_me.scrollTop(number * 607);
-	// 		}
-	// 	}
-	// 	load_page();		
-	// }	
-	// if (url == '') {
-	// 	watch_scroll();
-	// }
+	//Binds hashchange event to load_page function
+	$(window).bind('hashchange', load_page);
 
-	// // Calls the watch_scroll function each time page is scrolled
-	// $(window).scroll(watch_scroll);
-	// //watch_scroll();	
+	var page = document.location.hash.toString().replace('#/', '');
+	if (page != '') {
+		if (page != 'info' && page != 'store') {
+			var el = $('#p_' + page);
+			if (el.length == 0) {
+				scroll_me.scrollTop(0);
+			}
+			else {
+				url = page;
+				var number = el.attr('data-number');
+				scroll_me.scrollTop(number * 607);
+			}
+		}
+		load_page();		
+	}	
+	if (url == '') {
+		watch_scroll();
+	}
+
+	// Calls the watch_scroll function each time page is scrolled
+	$(window).scroll(watch_scroll);
+	//watch_scroll();	
 
 });

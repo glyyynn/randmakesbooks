@@ -1,10 +1,16 @@
 body {
 	min-width: 942px;
 	color: #000;
+	width:100%;
+	height: 2208px;body {
+	min-width: 942px;
+	color: #000;
+	width:100%;
+	height: 2208px;
 }
 
 #wrapper {
-	width: 1000px;
+	width:1000px;
 	margin: 0 auto;
 }
 
@@ -229,7 +235,258 @@ a.link {
 }
 
 
-/*** About Page ***/
+/*** About/Contact Page ***/
+
+.title {
+	padding-top: 15px;
+	text-align: center;
+}
+
+.title h1 {
+	padding-top: 115px;
+	font-size: 1.75em;
+}
+
+.title p {
+	font-family: Georgia, serif;
+	padding-top: 15px;
+}
+
+.title p:first-of-type {
+	padding-top: 50px;
+}
+
+
+}
+
+#wrapper {
+	max-width: 1000px;
+	width:100%;
+	margin: 0 auto;
+}
+
+header {
+  	z-index: 100;
+	height: 150px;
+	width: 860px;
+	margin-left: 67px;
+	position: relative;
+}
+
+.debug header {
+  background: rgba(0, 255, 0, .25);
+}
+
+header a#about, header a#contact {
+	position: absolute;
+/*	top: 55px;
+*/	padding-top: 70px;
+	padding-bottom: 55px;
+	padding-right: 25px;
+	padding-left: 25px;
+}
+
+header .nav-img {
+	position: inherit;
+	top: 0;
+}
+
+a {
+	font-style: none;
+	color: black;
+	font-family: Arial, sans-serif;
+	text-decoration: none;
+}
+
+a#about {
+	left: 0
+}
+
+a#contact {
+	right: 0
+}
+
+/*#logo-link {
+	width: 175px;
+	top: 25px;
+	position: absolute;
+	z-index: 200;
+}*/
+
+a.link {
+  display: block;
+  position: absolute;
+  top: 230px;
+  left: 130px;
+}
+
+#logo {
+	position: relative;
+	width: 200px;
+	top: 25px;
+	margin: 0 330px;
+}
+
+#main {
+  position: relative;
+  /*top: 225px;*/
+  padding-bottom: 25px;
+}
+
+.project {
+	display: block;
+	position: relative;
+	height: 500px;
+    margin-bottom: 10px;	
+	display: block;
+	cursor: pointer;
+}
+
+.left,
+.right {
+	position: absolute;
+	top: 220px;
+	cursor: pointer;
+}
+
+.left {
+	left: 0;
+}
+.right {
+	right: 0;
+}
+
+.photos {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	position: absolute;  
+}
+
+.project,
+.photos,
+.photos div,
+.photos img {
+  -webkit-user-select: none;  
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);     
+}
+
+.photos div {
+	left: -10000px;
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.photos div.loading {
+	/*background: url('../images/loading.png') center 228px no-repeat;	*/
+}
+
+.photos div {
+	background: none;
+}
+
+.photos div.on {
+	left: 0;
+}
+
+.photos div img {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	cursor: pointer;
+	-webkit-user-select: none;	
+	-webkit-user-drag: none;
+}
+
+.details {
+	position: relative;
+	float: left;
+	width: 220px;
+}
+
+.paging {
+	margin-top: 7px;
+	height: 50px;
+	position: relative;
+}
+
+.p1 {
+	opacity: .3;
+}
+
+.paging img {
+	display: block;
+	position: absolute;
+	right: 40px;
+	cursor: pointer;
+}
+
+.paging img.right {
+	right: 0;
+}
+
+.paging em {
+	position: absolute;
+	right: 78px;
+	top: 4px;
+	font-style: normal;
+	height: 4px;
+	letter-spacing: 1px;
+}
+
+.details p {
+	line-height: 1.5em;
+	color: #48453a;
+	letter-spacing: 1px;
+}
+
+.details h1 {
+	text-transform: uppercase;
+	font: 21px 'vinyl';
+	letter-spacing: 2px;
+	font-weight: normal;
+	display: block;
+	color: #aeada6;
+	margin-bottom: 15px;
+}
+
+.details h3 {
+	text-transform: uppercase;
+	display: block;
+	margin: 20px 0 4px 0;
+}
+
+.details nav {
+	line-height: 1.5em;
+}
+
+.details nav,
+.details nav a {
+	color: #bd6f4f;
+	font-style: italic;
+}
+
+.subtitle {
+	display: block;
+	position: relative;
+	height: 10px;
+    margin-bottom: 0px;	
+	display: block;
+	text-align: center;
+	font-family: Georgia, serif;
+	font-size: 14px;
+	padding-top: 5px;
+}
+
+.buy-link:hover {
+	text-decoration: underline;
+}
+
+
+/*** About/Contact Page ***/
 
 .title {
 	padding-top: 15px;
