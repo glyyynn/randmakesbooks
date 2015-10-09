@@ -40,7 +40,7 @@ function load_photo(el) {
 		// Function handles distance from top depending on image size
 		// & class changes
 		var i = new Image();
-		$(i).bind('load', function(e) { 
+		$(i).bind('load', function(e) {
 			var ph = parseInt(el.attr('data-height'));
 			if (ph < photo_height) {
 				$(this).css('top', Math.floor((photo_height - ph) / 2));
@@ -60,16 +60,11 @@ var swiping = false;
 
 // Begin of function execution
 
-$(document).ready(function() { 
-
-
+$(document).ready(function() {
 	var scroll_me = $('html');
 	if ($.browser.safari) {
 		scroll_me = $('body');
-	}  	
-
-
-
+	}
 	/*** PHOTO STUFF ***/
 
 	// Checks every second (1000) if "loading" is equal to 0.
@@ -87,8 +82,8 @@ $(document).ready(function() {
 	// Handles click event to shift photo
 
   	$('.project').mousemove(function(e) {
-    	x = parseInt(e.pageX);	
-	});	
+    	x = parseInt(e.pageX);
+	});
 
 	$('.project').click(function(e) {
 		if (!swiping) {
@@ -102,8 +97,6 @@ $(document).ready(function() {
 			}
 		}
 	});
-
-
 	// Loads photos on initial page load
 	// Loops through each .photos element, executing the function
 
@@ -126,24 +119,18 @@ $(document).ready(function() {
 				// threshold: 75,
 			// 	allowPageScroll: 'vertical'
 			// });
-
-
-
 	/*** SWIPE STUFF ***/
 
 	// Handles swipe event, using touchswipe.js, I imagine
-	$('.project').swipe({		
+	$('.project').swipe({
 		swipeLeft: function() {
-			shift_photo(this, 1);		
+			shift_photo(this, 1);
 		},
 		swipeRight: function() {
 			shift_photo(this, -1);
 		},
 		threshold: 75
 	});
-
-
-
 	/*** SCROLL STUFF ***/
 
 	// Changes the url based on scroll height
@@ -160,14 +147,12 @@ $(document).ready(function() {
 		// console.log([x, number, new_url]);
 		if (new_url != url) {
 			url = new_url;
-			$('a.close').attr('href', '#/' + url);			
+			$('a.close').attr('href', '#/' + url);
 			if (!popup) {
 				document.location = '#/' + url;
 			}
 		}
 	}
-
-
 	//Manages page load depending on url link and junk
 
 	function load_page() {
@@ -178,7 +163,7 @@ $(document).ready(function() {
 			popup = true;
 		}
 		else if (popup) {
-			popup = false;			
+			popup = false;
 			watch_scroll();
 		}
 		else {
@@ -204,14 +189,14 @@ $(document).ready(function() {
 				scroll_me.scrollTop(number * 607);
 			}
 		}
-		load_page();		
-	}	
+		load_page();
+	}
 	if (url == '') {
 		watch_scroll();
 	}
 
 	// Calls the watch_scroll function each time page is scrolled
 	$(window).scroll(watch_scroll);
-	//watch_scroll();	
+	//watch_scroll();
 
 });
