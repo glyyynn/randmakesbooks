@@ -2,6 +2,7 @@ var url = '';
 var popup = false;
 var photo_height = 548;
 
+// test change
 // Shift photo : (which photo, which direction)
 
 function shift_photo(p, direction) {
