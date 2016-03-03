@@ -62,15 +62,21 @@ var swiping = false;
 // Begin of function execution
 
 $(document).ready(function() {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> master
 	var scroll_me = $('html');
 	if ($.browser.safari) {
 		scroll_me = $('body');
 	}
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> master
 	/*** PHOTO STUFF ***/
 
 	// Checks every second (1000) if "loading" is equal to 0.
@@ -103,8 +109,6 @@ $(document).ready(function() {
 			}
 		}
 	});
-
-
 	// Loads photos on initial page load
 	// Loops through each .photos element, executing the function
 
@@ -127,9 +131,12 @@ $(document).ready(function() {
 				// threshold: 75,
 			// 	allowPageScroll: 'vertical'
 			// });
+<<<<<<< HEAD
 
 
   // git is hard
+=======
+>>>>>>> master
 	/*** SWIPE STUFF ***/
 
 	// Handles swipe event, using touchswipe.js, I imagine
@@ -142,9 +149,6 @@ $(document).ready(function() {
 		},
 		threshold: 75
 	});
-
-
-
 	/*** SCROLL STUFF ***/
 
 	// Changes the url based on scroll height
@@ -167,8 +171,6 @@ $(document).ready(function() {
 			}
 		}
 	}
-
-
 	//Manages page load depending on url link and junk
 
 	function load_page() {
