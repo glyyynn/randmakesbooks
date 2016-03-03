@@ -2,6 +2,7 @@ var url = '';
 var popup = false;
 var photo_height = 548;
 
+// test change
 // Shift photo : (which photo, which direction)
 
 function shift_photo(p, direction) {
@@ -61,10 +62,21 @@ var swiping = false;
 // Begin of function execution
 
 $(document).ready(function() {
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> master
 	var scroll_me = $('html');
 	if ($.browser.safari) {
 		scroll_me = $('body');
 	}
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> master
 	/*** PHOTO STUFF ***/
 
 	// Checks every second (1000) if "loading" is equal to 0.
@@ -119,6 +131,12 @@ $(document).ready(function() {
 				// threshold: 75,
 			// 	allowPageScroll: 'vertical'
 			// });
+<<<<<<< HEAD
+
+
+  // git is hard
+=======
+>>>>>>> master
 	/*** SWIPE STUFF ***/
 
 	// Handles swipe event, using touchswipe.js, I imagine
